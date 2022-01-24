@@ -1,0 +1,96 @@
+/*
+
+File Name: mixins.less
+Date: 03/03/2021
+Programmer: Ella Seaman
+
+*/
+
+// out: null
+.imgSize(@paramSize: 100%) {
+    width: @paramSize;
+    height: auto;
+}
+
+.heroImage(@paramImage: url("../images/heroRaccoon.jpg"); @paramColor: @color1) {
+    background-image: @paramImage;
+    background-color: @paramColor;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.headingStyle(@paramColor: #A68A72; @paramSize: 1em; @paramFont: 'Reenie Beanie', cursive;) {
+    color: @paramColor;
+    font-size: @paramSize;
+    font-weight: bold;
+    line-height: @paramSize;
+    margin-top: @paramSize;
+    margin-bottom: @paramSize;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-family: @paramFont;
+}
+
+.transition(@paramSeconds: 1s) {
+    -webkit-transition: all @paramSeconds ease-in-out;
+    -moz-transition: all @paramSeconds ease-in-out;
+    -o-transition: all @paramSeconds ease-in-out;
+    transition: all @paramSeconds ease-in-out;
+}
+
+.navBtn(@paramSeconds: 1s; @paramColor: #BDAB51){
+  background-color: @paramColor;
+  border: none;
+  padding: 2em 3em;
+  text-align: center;
+  font-size: 1em;
+  transition: @paramSeconds;
+}
+
+.borderBackgroundAndRadius(@paramColor: @lightColor2; @paramRadius:4px) {
+    background-color: @paramColor;
+    border-radius: @paramRadius;
+}
+
+.gradient(@paramDirection: right; @paramColor1: #000; @paramColor2: #260E05;        @paramColor3: #000) {
+    background: @paramColor1; 
+    background: -o-linear-gradient(@paramDirection, @paramColor1, @paramColor2, @paramColor3);
+    background: -moz-linear-gradient(@paramDirection, @paramColor1, @paramColor2, @paramColor3);
+    background: linear-gradient(to @paramDirection, @paramColor1, @paramColor2, @paramColor3);
+}
+
+.transparent() {
+  opacity: 0.5;
+}
+
+
+.border() {
+    border: 1px transparent;
+    border-radius: 5px;
+}
+
+.emphasize() {
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.bold() {
+    font-style: bold;
+    text-transform: uppercase;
+}
+
+.flipH() {
+    transform: scale(-1);
+}
+
+.textSpace() {
+    letter-spacing: 0.3em;
+    
+}
+.space() {
+    padding: .5em;
+    margin: .5em;
+}
